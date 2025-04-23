@@ -1,7 +1,5 @@
 <template>
-  <div id="scene-container">
-    <!-- <canvas id="scene"></canvas> -->
-  </div>
+  <div id="scene-container"></div>
 </template>
 
 <script setup>
@@ -16,8 +14,13 @@ function main() {
   const world = new World(container)
 
   // 2. Render the scene
+  console.log(world.camera)
+  console.log(world.renderer)
+  console.log(world.scene)
   world.render()
 }
+
+// We can access member variables from the instance
 
 onMounted(() => {
   main()
