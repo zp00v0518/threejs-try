@@ -1,3 +1,5 @@
+stop:https://discoverthreejs.com/book/first-steps/physically-based-rendering/#switch-to-the-physically-based-meshstandardmaterial
+
 # threejs
 
 література: https://www.pbr-book.org/ - Physically Based Rendering:From Theory To Implementation

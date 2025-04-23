@@ -1,4 +1,11 @@
-import { BufferGeometry, Mesh, MeshBasicMaterial, BufferAttribute } from 'three'
+import {
+  BufferGeometry,
+  Mesh,
+  MeshBasicMaterial,
+  BufferAttribute,
+  MeshStandardMaterial,
+  Color,
+} from 'three'
 
 function getGeometry() {
   const geometry = new BufferGeometry()
@@ -17,15 +24,15 @@ function getGeometry() {
     // передня грань
     0, 1, 2, 0, 2, 3,
     // права грань
-    // 1, 5, 6, 1, 6, 2,
+    1, 5, 6, 1, 6, 2,
     // задня грань
-    // 5, 4, 7, 5, 7, 6,
+    5, 4, 7, 5, 7, 6,
     // ліва грань
-    // 4, 0, 3, 4, 3, 7,
+    4, 0, 3, 4, 3, 7,
     // верхня грань
-    // 3, 2, 6, 3, 6, 7,
+    3, 2, 6, 3, 6, 7,
     // нижня грань
-    // 4, 5, 1, 4, 1, 0,
+    4, 5, 1, 4, 1, 0,
   ]
 
   // Додаємо атрибути
@@ -40,10 +47,11 @@ function createCube() {
   const geometry = new getGeometry(2, 2, 2)
 
   // create a default (white) Basic material
-  const material = new MeshBasicMaterial()
+  const material = new MeshStandardMaterial({ color: new Color('lightpink') })
 
   // create a Mesh containing the geometry and material
   const cube = new Mesh(geometry, material)
+  cube.rotation.set(-0.5, -0.1, 0.8)
 
   return cube
 }
