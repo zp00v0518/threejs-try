@@ -1,5 +1,7 @@
 # threejs
 
+література: https://www.pbr-book.org/ - Physically Based Rendering:From Theory To Implementation
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
