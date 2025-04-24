@@ -21,8 +21,7 @@ class World {
 
     const cube = createCube()
     const light = createLights()
-    const ambientLight = new THREE.AmbientLight('purple', 8) // м'яке біле світло
-    scene.add(ambientLight)
+
     scene.add(cube)
     scene.add(light)
 

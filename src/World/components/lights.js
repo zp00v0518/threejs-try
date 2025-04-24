@@ -1,10 +1,9 @@
-import { DirectionalLight } from 'three'
+import { DirectionalLight, AmbientLight } from 'three'
 
 function createLights() {
   // Create a directional light
-  const light = new DirectionalLight('white', 8)
-  const num = 10
-  light.position.set(num, num, num)
+  const light = new DirectionalLight('purple', 8)
+  light.position.set(10, 10, 10) // Налаштуйте положення
 
   return light
 }
